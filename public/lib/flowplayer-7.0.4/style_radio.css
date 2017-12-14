@@ -1,0 +1,55 @@
+#fp-audio .fp-timestamp {
+        display: none;
+        }
+        #fp-audio .fp-color {
+        background-color: #f00;
+        }
+        /* #fp-audio .fp-controls {
+            background-color: rgb(4, 80, 96);
+            background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(1, 103, 125)), to(rgba(120,0,0,0.85)));
+            background-image: -webkit-linear-gradient(top, rgba(220,0,0,0.85), rgba(120,0,0,0.85));
+            background-image: linear-gradient(to bottom, rgb(3, 81, 98), rgb(5, 53, 63));
+        } */
+        #fp-audio .fp-controls {
+            background-color: rgb(24, 39, 73);
+            background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(1, 103, 125)), to(rgba(120,0,0,0.85)));
+            background-image: -webkit-linear-gradient(top, rgba(220,0,0,0.85), rgba(120,0,0,0.85));
+            background-image: linear-gradient(to bottom, rgb(27, 45, 81), rgb(21, 29, 49));
+        }
+
+        .flowplayer .fp-bar, .flowplayer .fp-bar-slider {
+            background-color: rgb(24, 39, 73);
+        }
+        .flowplayer .fp-bar > *, .flowplayer .fp-bar-slider > * {
+            background-color: rgba(255, 255, 255, 0.32);
+            position: absolute;
+            height: 100%;
+            border-radius: 0.24em;
+        }
+        /* #fp-audio .fp-color {
+            background-color: #1d3772;
+        } */
+        #fp-audio .fp-color {
+            background-color: #203562;
+        }
+        
+
+        #mixed {
+        background-color: #036;
+        }
+        /* make cover image fill container width */
+        #mixed.is-audio .fp-player {
+        background-size: cover;          /* default: contain */
+        background-position: top center; /* default: center */
+        }
+        
+        /* icecast player */
+        .flowplayer.is-audio-only {
+        max-width: 400px;
+        background-color: #eee;
+        }
+        /* keep this controlbar-only player always at same height */
+        .flowplayer.is-audio-only.is-small,
+        .flowplayer.is-audio-only.is-tiny {
+        font-size: 16px;
+        }

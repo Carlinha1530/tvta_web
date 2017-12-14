@@ -1,0 +1,35 @@
+.text-center {
+  text-align: center; }
+.btn-group-vertical {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle; }
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+  border-radius: 0; }
+[data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"] {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  pointer-events: none; }
+.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0; }
+.streaming-container {
+  text-align: center;
+  background: black;
+  padding: 60px 0px 60px; }
+  .streaming-container .streaming {
+    min-height: 110px; }
+  .streaming-container .jwplayer {
+    margin: 0px auto; }
+  .streaming-container .video-control .btn {
+    background: black;
+    border-color: #999;
+    font-size: 12px;
+    margin-top: 15px;
+    color: white; }
+    .streaming-container .video-control .btn:hover {
+      border-color: white; }
+    .streaming-container .video-control .btn.active {
+      color: #999;
+      border-color: #999 !important;
+      cursor: default; }

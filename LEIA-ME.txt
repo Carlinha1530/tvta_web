@@ -1,0 +1,65 @@
+# é preciso alterar o .env caso deseje subi-lo ao servidor(pegar os dados do .env.example e colar no .env)
+basicamente é preciso alterar as linhas(APP_KEY e DB_HOST)para
+	DB_HOST=localhost
+	APP_KEY=base64:sWGuUy6UWgrgLQKGyJuJn+qHOyB8lluJdfsHUq6kRgU=base64:fB5ENimptD+LdLEzAOMuk9E5Fzoe1S9Dwy7g3QDawb4=base64:bPOxthcg3vAS1mMVLvjDJt5qLcoxB67W6jtNq1FwMUE=
+
+
+# é preciso aletar o app.php(da pasta config) comentar a linha 
+	'key' => env('APP_KEY'),  
+e descomentar a linha abaixo
+    // 'key' => env('base64:bPOxthcg3vAS1mMVLvjDJt5qLcoxB67W6jtNq1FwMUE='),
+
+
+LINKS para inserir mídias nos campos de textos
+http://v3.terceiroanjo.com/img/imagens_posts/nome_imagem.jpg (exemplo: 'index-1_img02.jpg')
+http://v3.terceiroanjo.com/mp3/para_videos/nome_audio.mp3 
+
+
+
+######## DADOS (.ENV) SITE NO AR ########
+
+APP_ENV=local
+APP_KEY=base64:sWGuUy6UWgrgLQKGyJuJn+qHOyB8lluJdfsHUq6kRgU=base64:fB5ENimptD+LdLEzAOMuk9E5Fzoe1S9Dwy7g3QDawb4=base64:bPOxthcg3vAS1mMVLvjDJt5qLcoxB67W6jtNq1FwMUE=
+APP_DEBUG=false
+APP_LOG_LEVEL=debug
+APP_URL=http://localhost
+
+DB_CONNECTION=mysql
+DB_HOST=localhost
+DB_PORT=3306
+DB_DATABASE=tvespgz6_v3
+DB_USERNAME=tvespgz6_v3
+DB_PASSWORD=$Z(3)GIGD9V{
+
+
+######## DADOS (.ENV) LOCAL COM BANCO DO SITE OFICIAL ########
+
+APP_ENV=local
+APP_KEY=base64:bPOxthcg3vAS1mMVLvjDJt5qLcoxB67W6jtNq1FwMUE=
+APP_DEBUG=true
+APP_LOG_LEVEL=debug
+APP_URL=http://localhost
+
+
+DB_CONNECTION=mysql
+DB_HOST=187.84.237.201
+DB_PORT=3306
+DB_DATABASE=tvespgz6_v3
+DB_USERNAME=tvespgz6_v3
+DB_PASSWORD=$Z(3)GIGD9V{
+
+
+######## DADOS (.ENV) LOCAL COM BANCO LOCAL ########
+
+APP_ENV=local
+APP_KEY=base64:bPOxthcg3vAS1mMVLvjDJt5qLcoxB67W6jtNq1FwMUE=
+APP_DEBUG=true
+APP_LOG_LEVEL=debug
+APP_URL=http://localhost
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=terceiro_anjo
+DB_USERNAME=root
+DB_PASSWORD=root

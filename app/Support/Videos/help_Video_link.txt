@@ -1,0 +1,26 @@
+Olá Ana, boa noite! 🙂 
+
+Acho que entendi sim... No caso de atualizar  ao invés de estar usando $videos->update($request->all()); deveria estar usando um $videos->fill($request->all()); logo após o Video::find() e lá no final apenas um $videos->save().
+
+Creio no entanto que sobrescrever a coluna "link_video" com o link do embed possa trazer problemas para links que fujam do padrão da expressão regular utilizada... Tem alguma razão especial para a coluna "tipo" existir?
+
+Tipo, você pode extrair esse código de converter um link de vídeo para link de embed para um helper ou classe de suporte e nem precisaria estar salvando o link de embed ou tipo de vídeo... Se achar necessário salvar, creio que o link de embed deveria ser armazenado em outra coluna sem alterar o link original. 🙂 
+
+Te preparei um exemplo de como isso pode ser desacoplado em classes de suporte externas aqui: https://eval.in/822152
+Em cima de cada classe eu coloquei um comentário mostrando onde cada classe seria armazenada. Todas devem usar a mesma linha de namespace. 󰀀 
+
+Mantendo isso separado não apenas limpa os controllers como inclusive facilita estender o código se algum dia tu precisar adicionar algum outro site de vídeo como por exemplo o Dailymotion. 🙂 
+
+No controller tu poderia usar apenas isso:
+
+use App\Support\Videos\VideoLink;
+
+...
+
+$video_link = VideoLink::parse($request->link_video);
+
+$videos->tipo = $video_link->type();
+$videos->link_embed = $video_link->toEmbed();
+$videos->save();
+
+Seja como for isso vai simplificar bastante! 😀

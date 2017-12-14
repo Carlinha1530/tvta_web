@@ -1,0 +1,10 @@
+a[data-type='lightbox']:hover img{
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=20);
+}
+
+
+
+.camera_prev > span:hover,
+.camera_next > span:hover{
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+}

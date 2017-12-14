@@ -1,0 +1,151 @@
+/* Main menu styles
+========================================================*/
+nav {
+  float: left;
+}
+.sf-menu > li {
+  position: relative;
+  float: left;
+  font: normal 13px/30px 'Open Sans', sans-serif;
+  margin: 29px 0px 30px;
+}
+.sf-menu > li + li {
+  margin-left: 40px;
+}
+.sf-menu > li > a:hover:after,
+.sf-menu > li.current > a:after,
+.sf-menu > li.sfHover > a:after {
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: 0;
+  width: 64px;
+  height: 1px;
+  background: #f8d62d;
+}
+.sf-menu > li > a {
+  position: relative;
+  display: inline-block;
+  color: #ffffff;
+  text-transform: capitalize;
+  border-top: 1px solid transparent;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+.sf-menu > li > .fa-caret-down {
+  position: relative;
+  font: inherit;
+}
+.sf-menu > li > .fa-caret-down:before {
+  position: absolute;
+  top: 50%;
+  margin-top: -8px;
+  left: 100%;
+  font: normal 13px/30px 'FontAwesome';
+  line-height: 20px;
+  margin-left: 2px;
+}
+.sf-menu > li .fa-search {
+  display: block;
+  margin: 47px 0 47px 11px;
+  font-size: 17px;
+  line-height: 20px;
+  width: 20px;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+.sf-menu > li .fa-search:hover {
+  color: #fff9cc;
+}
+.sf-menu a {
+  display: block;
+  text-decoration: none;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+/* First level sub-menu styles
+========================================================*/
+.sf-menu > li > ul {
+  position: absolute;
+  top: 62px;
+  left: 50%;
+  margin-left: -62px;
+}
+.sf-menu ul {
+  width: 128px;
+  z-index: 5;
+  display: none;
+  background: #191919;
+  padding: 10px 0 10px;
+}
+.sf-menu ul li {
+  position: relative;
+  font: normal 12px/32px 'Open Sans', sans-serif;
+}
+.sf-menu ul li.sfHover > a,
+.sf-menu ul li a:hover {
+  color: #191919;
+  background: #ffffff;
+}
+.sf-menu ul li a {
+  display: block;
+  color: #ffffff;
+  padding: 0 14px;
+}
+.sf-menu ul li a.fa {
+  position: relative;
+  font: inherit;
+}
+.sf-menu ul li a.fa:before {
+  position: absolute;
+  top: 50%;
+  margin-top: -13px;
+  right: 13px;
+  font: normal 12px 'FontAwesome';
+  line-height: 28px;
+  margin-left: 2px;
+}
+/* Second level sub-menu styles
+========================================================*/
+.sf-menu ul > li > ul {
+  position: absolute;
+  top: -10px;
+  left: 108%;
+  background: #191919;
+  z-index: 4;
+}
+.sf-menu ul > li > ul li a {
+  color: #ffffff;
+}
+.sf-menu ul > li > ul li a:hover {
+  color: #191919;
+}
+.select-menu {
+  display: block;
+  width: 100%;
+  height: 40px;
+  -webkit-appearance: none;
+  font: normal 17px/23px 'Lato', sans-serif;
+  margin-bottom: 21px;
+  border-radius: 0;
+  background: #fff;
+}
+@media only screen and (max-width: 767px) {
+  nav {
+    display: block;
+    float: none;
+    margin-top: 30px;
+  }
+  nav .sf-menu {
+    display: none;
+  }
+}
+.put-left {
+  float: left;
+}
+.put-right {
+  float: right;
+}

@@ -1,0 +1,48 @@
+@extends('layouts.site')
+
+@section('pagina_titulo', 'Streaming')
+
+@section('content')
+    
+    {{-- <script src="/lib/streaming.js"></script> --}}
+
+    <!-- Youtube Player: -->
+    {{-- 
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/live_stream?channel=UCkSu5ibA15OcBWTjop72dPA&autoplay=1&controls=2" frameborder="0" allowfullscreen></iframe> 
+    --}}    
+    {{-- <div class="embed-responsive embed-responsive-16by9">
+      <iframe class="embed-responsive-item" src="..."></iframe>
+    </div> --}}
+    
+    <style>
+       /* .streaming-container {
+            text-align: center;
+            background: black;
+            padding: 60px 0px 20px;
+        }*/
+    </style>
+    <div class="embed-responsive embed-responsive-16by9">
+        <div id="video-container" class="streaming">
+            {{-- Iniciando transmissão... --}}
+            <iframe src="https://www.youtube.com/embed/live_stream?channel=UCkSu5ibA15OcBWTjop72dPA&autoplay=1&controls=2" width="100%" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            {{-- <iframe src="https://www.youtube.com/embed/live_stream?channel=UCkSu5ibA15OcBWTjop72dPA&autoplay=1&controls=2" width="100%" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> --}}
+
+            {{-- <div id="video-control" class="video-control text-center">
+                <div class="btn-group" data-toggle="buttons">
+                    <!--label class="btn btn-xs btn-primary">
+                        <input data-qual="low" type="radio" name="options" id="option1" autocomplete="off"> BAIXA
+                    </label-->
+                    <label class="btn btn-xs btn-primary">
+                        <input data-qual="medium" type="radio" name="options" id="option2" autocomplete="off"> MÉDIA
+                    </label>
+                    <label class="btn btn-xs btn-primary active">
+                        <input data-qual="high" type="radio" name="options" id="option3" autocomplete="off" checked> ALTA
+                    </label>
+                </div>
+            </div> --}}
+        </div>
+    </div><br><br>
+ 
+    @include('layouts._site._streaming_flags')
+
+@endsection

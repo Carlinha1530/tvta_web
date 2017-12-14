@@ -1,0 +1,48 @@
+{
+    "name": "orchestra/testbench",
+    "description": "Laravel Testing Helper for Packages Development",
+    "homepage": "http://orchestraplatform.com/docs/latest/components/testbench/",
+    "keywords": ["laravel", "orchestral", "orchestra-platform", "testing", "tdd", "bdd"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mior Muhammad Zaki",
+            "email": "crynobone@gmail.com",
+            "homepage": "https://github.com/crynobone"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Orchestra\\Testbench\\" : "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Orchestra\\Testbench\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": ">=5.6.0",
+        "laravel/framework": "~5.4.15",
+        "fzaninotto/faker": "~1.4",
+        "symfony/css-selector": "~3.2.0",
+        "symfony/dom-crawler": "~3.2.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "^0.9.4",
+        "phpunit/phpunit": "~5.7",
+        "orchestra/database": "~3.4.0"
+    },
+    "suggest": {
+        "mockery/mockery": "Allow to use Mockery for testing (^0.9.4).",
+        "phpunit/phpunit": "Allow to use PHPUnit for testing (~5.7).",
+        "orchestra/database": "Allow to use --realpath migration for testing (~3.4).",
+        "orchestra/testbench-browser-kit": "Allow to use legacy BrowserKit for testing (~3.4)."
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.4-dev"
+        }
+    },
+    "minimum-stability": "dev"
+}
