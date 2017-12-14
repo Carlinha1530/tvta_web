@@ -33,10 +33,17 @@
 
     {{-- flowplayer --}}
     <script src="{{asset('/lib/flowplayer-7.0.4/flowplayer.audio.min.js')}}"></script> 
-    {{--  <link rel="stylesheet" href="{{asset('/lib/flowplayer-7.0.4/skin/skin.css')}}">  --}}
-    <script src="{{asset('/js/flowplayer.min.js')}}"></script>
+    <link rel="stylesheet" href="{{asset('/lib/flowplayer-7.0.4/skin/skin.css')}}">
     <script src="{{asset('/js/jquery.min.js')}}"></script> 
-    <script src="{{asset('/js/flowplayer.hlsjs.light.min.js')}}"></script> 
+
+    <script src="{{asset('/js/0.8.4.hls.min.js')}}"></script> 
+    <script src="{{asset('/js/7.1.0.flowplayer.min.js')}}"></script> 
+    <script src="{{asset('/js/flowplayer.hlsjs.light.js')}}"></script> 
+
+    {{--  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>  --}}
+    {{--  <script src="//releases.flowplayer.org/7.1.0/flowplayer.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/hls.js/0.8.4/hls.min.js"></script>
+    <script src="//releases.flowplayer.org/hlsjs/flowplayer.hlsjs.light.js"></script>  --}}
 
     {{-- <link rel="stylesheet" href="{{asset('/lib/flowplayer-7.0.4/style_radio.css')}}"> --}}
   

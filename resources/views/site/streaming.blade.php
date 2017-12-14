@@ -65,40 +65,20 @@
 
     </style>
 
-	<script>
-		// // TESTE 2 flowplayer OKOK
-		//jQuery(document).ready(function() {
-		//	var api = flowplayer("#streaming", {
-		//		live: true,
-		//		splash: true,
-		//		clip: {
-		//			sources: [{
-		//				type: "application/x-mpegurl",
-		//				src: "http://streamer1.streamhost.org:1935/salive/GMIFLNL/playlist.m3u8",
-		//			}],
-					//title: "Rádio Terceiro Anjo",
-		//			autoplay: true,
-		//		},
-		//	});
-		//});
-    </script>
-	
-
-	{{--  <div class="row">
+	<div class="row">
 		<div class="col-md-8">
-			<div class="">  --}}
+			<div class="">
 			
 					<div data-live="true" data-ratio="0.5625" data-share="false" class="flowplayer">
-						<video data-title="Live stream">
+						<video autoplay preload controls data-title="Live stream">
 								<source type="application/x-mpegurl" src="http://streamer1.streamhost.org:1935/salive/GMIFLNL/playlist.m3u8">
 						</video>
 					</div>
-
-			{{--  </div><br>
+			</div><br>
 		</div>
-	</div>  --}}
+	</div>
 	
-    {{--  @include('layouts._site._streaming_flags')  --}}
+    @include('layouts._site._streaming_flags')
 
 @endsection
 
