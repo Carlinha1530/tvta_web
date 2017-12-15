@@ -31,21 +31,35 @@
     <link rel="stylesheet" href="{{asset('/lib/screen.css')}}">
 
 
-    {{-- flowplayer --}}
-    <script src="{{asset('/lib/flowplayer-7.0.4/flowplayer.audio.min.js')}}"></script> 
+    {{-- flowplayer TV--}}
+    {{--  <script src="{{asset('/lib/flowplayer-7.0.4/flowplayer.audio.min.js')}}"></script>   --}}
     <link rel="stylesheet" href="{{asset('/lib/flowplayer-7.0.4/skin/skin.css')}}">
     <script src="{{asset('/js/jquery.min.js')}}"></script> 
 
     <script src="{{asset('/js/0.8.4.hls.min.js')}}"></script> 
     <script src="{{asset('/js/7.1.0.flowplayer.min.js')}}"></script> 
     <script src="{{asset('/js/flowplayer.hlsjs.light.js')}}"></script> 
+    
+    {{--  flowplayer Rádio  --}}    
+    <link rel="stylesheet" href="{{asset('/lib/flowplayer-7.0.4/flowplayer.audio.css')}}">
+    <script src="//releases.flowplayer.org/audio/flowplayer.audio.min.js"></script>
+    {{--  <script src="{{asset('/js/flowplayer.audio.min.js')}}"></script>   --}}
+    {{--  <script src="{{asset('/js/7.2.1.flowplayer.min.js')}}"></script>   --}}
+    <script>
+        $("#fp-audio").flowplayer({
+            //autoplay: true,
+            splash: true,
+            flashls: {
+                startfromlevel: 0
+            }
+        });
+    </script>
+
 
     {{--  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>  --}}
     {{--  <script src="//releases.flowplayer.org/7.1.0/flowplayer.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/hls.js/0.8.4/hls.min.js"></script>
     <script src="//releases.flowplayer.org/hlsjs/flowplayer.hlsjs.light.js"></script>  --}}
-
-    {{-- <link rel="stylesheet" href="{{asset('/lib/flowplayer-7.0.4/style_radio.css')}}"> --}}
   
     <script src="{{asset('/js/app.js')}}"></script>
     <script src="{{asset('/js/jquery.js')}}"></script>{{--Remover pra usar o popover e tooltip--}}
@@ -57,6 +71,8 @@
     <script src="{{asset('/js/jquery.fancybox-media.js')}}"></script>
     <script src="{{asset('/js/jquery.mobile.customized.min.js')}}"></script>
     <script src="{{asset('/js/wow/wow.js')}}"></script>
+
+
 
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script>
@@ -105,7 +121,7 @@
         </footer>
     </div>
     
-    <script src="{{asset('/lib/radio.js')}}"></script> 
+    {{--  <script src="{{asset('/lib/radio.js')}}"></script>   --}}
     
 </body>
 </html>

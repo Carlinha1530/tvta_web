@@ -3,14 +3,13 @@
 @section('pagina_titulo', 'Streaming')
 
 @section('content')
+    {{-- <div class="embed-responsive embed-responsive-16by9">
+        <div id="video-container" class="streaming">
+            <iframe src="https://www.youtube.com/embed/live_stream?channel=UCkSu5ibA15OcBWTjop72dPA&autoplay=1&controls=2" width="100%" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+    </div> --}}
 
     <style>
-		.flowplayer {
-		background-color: #00abcd;
-		}
-		.flowplayer .fp-color-play {
-		fill: #eee;
-		}
     	
     	.img{
 			height: 490px;
@@ -65,20 +64,40 @@
 
     </style>
 
+	<script>
+		// // TESTE 2 flowplayer OKOK
+		jQuery(document).ready(function() {
+			var api = flowplayer("#streaming", {
+				live: true,
+				splash: true,
+				clip: {
+					sources: [{
+						type: "application/x-mpegurl",
+						src: "http://streamer1.streamhost.org:1935/salive/GMIFLNL/playlist.m3u8",
+					}],
+					//title: "Rádio Terceiro Anjo",
+					autoplay: true,
+				},
+			});
+		});
+    </script>
+
 	<div class="row">
 		<div class="col-md-8">
-			<h3>NO AR AGORA</h1>
-			@foreach($collection2->take(1) as $item)
-				<h1>{{$item->name}}</h1>
-			@endforeach
-			{{--  <div id="video-container" class="streaming img">  --}}
-				<div data-live="true" data-ratio="0.5625" data-share="false" class="flowplayer">
-					<video autoplay preload controls data-title="Live stream">
-							{{--  <source type="application/x-mpegurl" src="http://streamer1.streamhost.org:1935/salive/GMIFLNL/playlist.m3u8">  --}}
-							<source type="application/x-mpegurl" src="http://streamer1.streamhost.org:1935/salive/GMI3anjoh/playlist.m3u8">
-					</video>
-				</div><br>
-			{{--  </div>  --}}
+			<div class="">
+				<div id="video-container" class="streaming img">
+					<h3>NO AR AGORA</h1>
+					@foreach($collection2->take(1) as $item)
+						<h1>{{$item->name}}</h1>
+					@endforeach
+					{{--  <iframe class="stream" src="https://www.youtube.com/embed/live_stream?channel=UCkSu5ibA15OcBWTjop72dPA&autoplay=1&controls=2" width="560" height="315" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><br>  --}}
+
+					<!-- TESTE 2 flowplayer -->
+                    <div id="streaming"  class="stream" class="flowplayer fixed-controls" style="width:600px; height:338px;"></div>
+					
+
+				</div>
+			</div><br>
 		</div>
 		<div class="col-md-4">
 			<h2>A seguir</h2>
@@ -100,8 +119,26 @@
 			</ul>
 		</div>
 	</div>
+
+    
 	
     @include('layouts._site._streaming_flags')
+
+	{{--  comparacao com a data e a hora atual  --}}
+	{{--  quando for igual, recarrega a lista  --}}
+	<script>
+		//Use setInterval:
+/*
+		$(function(){
+			setInterval(oneSecondFunction, 1000);
+		});
+
+		function oneSecondFunction() {
+		// stuff you want to do every second
+		}
+		setInterval(oneSecondFunction, 1000);
+*/
+	</script>
 
 @endsection
 
