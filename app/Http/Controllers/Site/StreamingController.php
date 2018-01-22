@@ -50,8 +50,8 @@ class StreamingController extends Controller
             list($hours, $minutes, $seconds) = explode(":", $item['Duration']);
             $seconds = (float)$seconds;
             $seconds = ceil($seconds);
-            $intervalo = new DateInterval("PT" . $hours . "H" . $minutes . "M" . $seconds . "S");
-            $data->add($intervalo);
+            $intervalo = new DateInterval("PT" . $hours . "H" . $minutes . "M" . $seconds . "S"); // duracao do video
+            $data->add($intervalo);// data do video + a duração / data/hora final do término do vídeo
             // dd($data);        
 
             $items[] = (object)[

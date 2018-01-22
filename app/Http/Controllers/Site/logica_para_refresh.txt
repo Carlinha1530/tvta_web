@@ -1,0 +1,41 @@
+
+
+Isso
+quando for igual
+recarrega
+a lista
+tendi
+vou da uma pesquisada...
+
+Blz
+mas se nao for php..se for em js qual a função? vc sabe??
+
+Vish de cabeça não
+mas está fácil na web
+kkk
+deve ser serInterval
+ha tranquilo rsrsr
+
+algo assim
+vou ver isso
+mas cara eu nem tinha pensado nessa possibilidade..
+valeu srrs
+
+https://stackoverflow.com/questions/5638783/how-do-i-get-this-javascript-to-run-every-second
+Aqui tem
+5
+down vote
+Use setInterval:
+
+$(function(){
+setInterval(oneSecondFunction, 1000);
+});
+
+function oneSecondFunction() {
+// stuff you want to do every second
+}
+Here's a
+setInterval(oneSecondFunction, 1000);
+ele chama a função todo segundo
+dai dentro da função vocÊ verifica
+as datas

@@ -32,7 +32,6 @@
 
 
     {{-- flowplayer TV--}}
-    {{--  <script src="{{asset('/lib/flowplayer-7.0.4/flowplayer.audio.min.js')}}"></script>   --}}
     <link rel="stylesheet" href="{{asset('/lib/flowplayer-7.0.4/skin/skin.css')}}">
     <script src="{{asset('/js/jquery.min.js')}}"></script> 
 
